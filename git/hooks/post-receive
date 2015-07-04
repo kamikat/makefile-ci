@@ -16,10 +16,10 @@
 
 cd ..
 
+read oldrev newrev refname
+
 env -i git reset --hard $refname
 env -i git submodule update --init --recursive
-
-read oldrev newrev refname
 
 case "$refname" in
 refs/tags/*)
